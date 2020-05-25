@@ -1,18 +1,22 @@
+import React from "react";
+import styled from "styled-components";
+
+const srcCode = `
 import React, { useState } from "react";
 import styled, { keyframes } from "styled-components";
-// import { Modal } from "../components";
+import { Modal } from "../components";
 import SourceCode from "./SourceCode";
 
-const overgrow = keyframes`
+const overgrow = keyframes\`
   0%{
     background-image: linear-gradient(120deg, #d4fc79 0%, #96e6a1 100%);
   }
   100%{
     background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
   }
-`;
+\`;
 
-const shake = keyframes`
+const shake = keyframes\`
   0%{
     transform: scale(1) rotate(0deg);
   }
@@ -22,16 +26,16 @@ const shake = keyframes`
   100%{
     transform: scale(1.5) rotate(360deg);
   }
-`;
+\`;
 
-const Field = styled.div`
+const Field = styled.div\`
   position: relative;
   width: 100vw;
   height: 100vh;
-  animation: ${overgrow} 3s infinite alternate linear;
-`;
+  animation: \${overgrow} 3s infinite alternate linear;
+\`;
 
-const Box = styled.div<{ size: number }>`
+const Box = styled.div<{ size: number }>\`
   position: absolute;
   z-index: 10;
   top: 50%;
@@ -40,12 +44,12 @@ const Box = styled.div<{ size: number }>`
   user-select: none;
   span {
     display: inline-block;
-    font-size: ${({ size }) => size + "rem"};
-    animation: ${shake} 4s infinite linear both alternate;
+    font-size: \${({ size }) => size + "rem"};
+    animation: \${shake} 4s infinite linear both alternate;
   }
-`;
+\`;
 
-const Button = styled.div`
+const Button = styled.div\`
   position: absolute;
   bottom: 50px;
   right: 50px;
@@ -66,11 +70,11 @@ const Button = styled.div`
   &:hover {
     opacity: 0.9;
   }
-`;
+\`;
 
-const Container = styled.div`
+const Container = styled.div\`
   display: flex;
-`;
+\`;
 
 const App = () => {
   const [count, setCount] = useState(3);
@@ -97,3 +101,22 @@ const App = () => {
 };
 
 export default App;
+`;
+
+const Container = styled.div`
+  width: 100%;
+  height: 100vh;
+  overflow: scroll;
+`;
+
+const SourceCode = () => {
+  return (
+    <Container>
+      <pre>
+        <code className="prettyprint">{srcCode}</code>
+      </pre>
+    </Container>
+  );
+};
+
+export default SourceCode;
