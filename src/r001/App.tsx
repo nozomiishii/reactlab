@@ -92,7 +92,9 @@ const App = () => {
           </div>
         )}
       </Container>
-      <Button onClick={() => setDisplayCode((prev) => !prev)}>{"</>"}</Button>
+      <Button onClick={() => setDisplayCode((prev) => !prev)}>
+        {displayCode ? "✕" : "</>"}
+      </Button>
     </>
   );
 };
