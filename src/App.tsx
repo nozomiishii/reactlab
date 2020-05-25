@@ -2,7 +2,7 @@ import React from "react";
 import { createGlobalStyle } from "styled-components";
 import { BrowserRouter, Switch, Route } from "react-router-dom";
 import Home from "./Home";
-import t001 from "./t001/App";
+import r001 from "./r001/App";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -19,7 +19,7 @@ function App() {
       <BrowserRouter>
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/t001" component={t001} />
+          <Route exact path="/r001" component={r001} />
         </Switch>
       </BrowserRouter>
     </>

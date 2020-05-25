@@ -44,19 +44,55 @@ const Box = styled.div<{ size: number }>`
   }
 `;
 
+const Button = styled.div`
+  position: absolute;
+  bottom: 50px;
+  right: 50px;
+  height: 80px;
+  width: 80px;
+  border: 3px solid #2e2a2e;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  user-select: none;
+  background-image: radial-gradient(
+    circle 248px at center,
+    #16d9e3 0%,
+    #30c7ec 47%,
+    #46aef7 100%
+  );
+  &:hover {
+    opacity: 0.9;
+  }
+`;
+
+const Container = styled.div`
+  display: flex;
+`;
+
 const App = () => {
   const [count, setCount] = useState(3);
+  const [displayCode, setDisplayCode] = useState(false);
 
   return (
     <>
-      <Modal title="React Lab" />
-      <Field onClick={() => setCount((prev) => prev + 1)}>
-        <Box size={count}>
-          <span role="img" aria-label="img">
-            🦕
-          </span>
-        </Box>
-      </Field>
+      {/* <Modal title="React Lab" /> */}
+      <Container>
+        <Field onClick={() => setCount((prev) => prev + 1)}>
+          <Box size={count}>
+            <span role="img" aria-label="img">
+              🦕
+            </span>
+          </Box>
+        </Field>
+        {displayCode && (
+          <div>
+            <h1>Source</h1>
+          </div>
+        )}
+      </Container>
+      <Button onClick={() => setDisplayCode((prev) => !prev)}>{"</>"}</Button>
     </>
   );
 };
