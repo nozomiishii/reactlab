@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/reactlab/static/css/main.5f361e03.chunk.css",
+    "main.js": "/reactlab/static/js/main.96b05305.chunk.js",
+    "main.js.map": "/reactlab/static/js/main.96b05305.chunk.js.map",
+    "runtime-main.js": "/reactlab/static/js/runtime-main.787ae847.js",
+    "runtime-main.js.map": "/reactlab/static/js/runtime-main.787ae847.js.map",
+    "static/js/2.1535ec1d.chunk.js": "/reactlab/static/js/2.1535ec1d.chunk.js",
+    "static/js/2.1535ec1d.chunk.js.map": "/reactlab/static/js/2.1535ec1d.chunk.js.map",
+    "index.html": "/reactlab/index.html",
+    "precache-manifest.5cf3f3cb9575289c8130ad0db4d86c29.js": "/reactlab/precache-manifest.5cf3f3cb9575289c8130ad0db4d86c29.js",
+    "service-worker.js": "/reactlab/service-worker.js",
+    "static/css/main.5f361e03.chunk.css.map": "/reactlab/static/css/main.5f361e03.chunk.css.map",
+    "static/js/2.1535ec1d.chunk.js.LICENSE.txt": "/reactlab/static/js/2.1535ec1d.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/reactlab/static/media/logo.5d5d9eef.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.787ae847.js",
+    "static/js/2.1535ec1d.chunk.js",
+    "static/css/main.5f361e03.chunk.css",
+    "static/js/main.96b05305.chunk.js"
+  ]
+}
