@@ -112,8 +112,8 @@ const Container = styled.div`
 const SourceCode = () => {
   return (
     <Container>
-      <pre>
-        <code className="prettyprint">{srcCode}</code>
+      <pre className="prettyprint">
+        <code>{srcCode}</code>
       </pre>
     </Container>
   );
