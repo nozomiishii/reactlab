@@ -1,7 +1,9 @@
 import React from "react";
+// import RandomColorBtn from ""
 
 const App = () => {
-  return <div>day2</div>;
+  // return <RandomColorBtn>day2</RandomColorBtn>;
+  return <div>tst</div>;
 };
 
 export default App;
