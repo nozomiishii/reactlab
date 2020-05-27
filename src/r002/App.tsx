@@ -2,11 +2,22 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { FlexCenterFlame } from "../components";
 
-const CustomBtn = styled.div<{ red: number; blue: number; green: number }>`
+interface Props {
+  red: number;
+  blue: number;
+  green: number;
+  height: number;
+  width: number;
+  size: number;
+}
+
+const CustomBtn = styled.div<Props>`
   background: ${(p) => `rgb(${p.red}, ${p.blue}, ${p.green})`};
-  width: 80px;
-  height: 50px;
-  border-radius: 3px;
+  width: ${(p) => p.width * 4 + "px"};
+  height: ${(p) => p.height * 4 + "px"};
+  border-radius: ${(p) => p.size + "px"};
+  font-size: ${(p) => p.size + "px"};
+  border: ${(p) => `${p.size}px solid`};
   &:hover {
     opacity: 0.9;
   }
@@ -22,7 +33,14 @@ const CustomBtn = styled.div<{ red: number; blue: number; green: number }>`
 const App = () => {
   const icons = ["👨🏻‍🚀", "🐿", "🦀", "🧞‍♀️", "🐸"];
   const [icon, setIcon] = useState<string>("button");
+  let red = Math.floor(Math.random() * 255);
+  let blue = Math.floor(Math.random() * 255);
+  let green = Math.floor(Math.random() * 255);
+  let height = Math.floor(Math.random() * 40 + 5);
+  let width = Math.floor(Math.random() * 40 + 5);
+  let size = Math.floor(Math.random() * 100);
 
+  console.log(red);
   const handleClick = () => {
     let random = Math.floor(Math.random() * icons.length);
     setIcon(icons[random]);
@@ -30,7 +48,15 @@ const App = () => {
 
   return (
     <FlexCenterFlame>
-      <CustomBtn red={44} blue={56} green={222} onClick={handleClick}>
+      <CustomBtn
+        red={red}
+        blue={blue}
+        green={green}
+        onClick={handleClick}
+        height={height}
+        width={width}
+        size={size}
+      >
         {icon}
       </CustomBtn>
     </FlexCenterFlame>
