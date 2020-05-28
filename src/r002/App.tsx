@@ -17,7 +17,7 @@ const CustomBtn = styled.div<Props>`
   height: ${(p) => p.height * 4 + "px"};
   border-radius: ${(p) => p.size + "px"};
   font-size: ${(p) => p.size + "px"};
-  border: ${(p) => `${p.size}px solid`};
+  border: ${(p) => `${p.size}px solid rgb( ${p.blue},${p.green}, ${p.red})`};
   &:hover {
     opacity: 0.9;
   }
@@ -30,9 +30,17 @@ const CustomBtn = styled.div<Props>`
   color: ${(p) => `rgb(${p.green}, ${p.red}, ${p.blue})`};
 `;
 
+const Title = styled.div`
+  position: absolute;
+  top: 30vh;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  user-select: none;
+`;
+
 const App = () => {
   const icons = ["👨🏻‍🚀", "🐿", "🦀", "🧞‍♀️", "🐸"];
-  const [icon, setIcon] = useState<string>("button");
+  const [icon, setIcon] = useState<string>("Click!");
   let red = Math.floor(Math.random() * 255);
   let blue = Math.floor(Math.random() * 255);
   let green = Math.floor(Math.random() * 255);
@@ -48,6 +56,9 @@ const App = () => {
 
   return (
     <FlexCenterFlame>
+      <Title>
+        <h1>Custom Button</h1>
+      </Title>
       <CustomBtn
         red={red}
         blue={blue}
