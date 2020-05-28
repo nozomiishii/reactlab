@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styled from "styled-components";
-import { FlexCenterFlame } from "../components";
+import { FlexCenterFlame } from "../../components";
 
 interface Props {
   red: number;
