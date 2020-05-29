@@ -6,6 +6,7 @@ import Home from "./Home";
 import r001 from "./lab/r001/App";
 import r002 from "./lab/r002/App";
 import r003 from "./lab/r003/App";
+import r004 from "./lab/r004/App";
 
 const GlobalStyle = createGlobalStyle`
   *{
@@ -26,6 +27,7 @@ function App() {
           <Route exact path="/r001" component={r001} />
           <Route exact path="/r002" component={r002} />
           <Route exact path="/r003" component={r003} />
+          <Route exact path="/r004" component={r004} />
         </Switch>
       </BrowserRouter>
     </>

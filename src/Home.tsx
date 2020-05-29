@@ -13,6 +13,7 @@ const Home: React.FC = () => {
       <CustomLink to="/r001">R001</CustomLink>
       <CustomLink to="/r002">R002</CustomLink>
       <CustomLink to="/r003">R003</CustomLink>
+      <CustomLink to="/r004">R004</CustomLink>
     </div>
   );
 };
